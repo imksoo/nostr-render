@@ -14,7 +14,9 @@ const url = computed(() => {
     case "nevent":
       return nostx + Nostr.nip19.noteEncode(props.link.data.id);
     case "note":
-      return nostx + Nostr.nip19.noteEncode(props.link.data)
+      return nostx + Nostr.nip19.noteEncode(props.link.data);
+    case "npub":
+      return nostx + Nostr.nip19.npubEncode(props.link.data);
   }
 })
 </script>
@@ -32,5 +34,8 @@ const url = computed(() => {
 }
 .nevent {
   color: green;
+}
+.npub {
+  color: darkviolet;
 }
 </style>
