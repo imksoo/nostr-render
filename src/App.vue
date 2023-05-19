@@ -25,6 +25,7 @@ const kind = computed(() =>{
 
 <template>
   <h1>Nostr event (JSON)</h1>
+  <p>下にイベントのJSON文字列を貼り付けるとパースして表示します。(対応kind=0, 1)</p>
   <textarea v-model="eventJSON" id="eventJSON"></textarea>
   <div v-if="event">
     <NostrProfile :event="event" v-if="kind===0"></NostrProfile>

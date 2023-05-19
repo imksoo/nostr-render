@@ -17,7 +17,7 @@ const content = computed(() => {
   }
 })
 
-const created_at_str = computed(()=>{
+const created_at_str = computed(() => {
   return new Date(props.event.created_at * 1000).toLocaleString()
 })
 </script>
@@ -43,6 +43,7 @@ const created_at_str = computed(()=>{
 .verify-signature-succeeded {
   color: blue;
 }
+
 .verify-signature-error {
   color: red;
 }
